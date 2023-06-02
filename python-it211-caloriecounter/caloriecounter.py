@@ -1,8 +1,8 @@
-#Calorie Counter program
+# Calorie Counter program
 
 import calorietracker
 
-#main definition
+# main definition
 def main():
     total = 0
     calorie_men = 2500

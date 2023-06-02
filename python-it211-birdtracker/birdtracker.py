@@ -1,4 +1,4 @@
-#4 days
+# 4 days
 
 total = 0
 day = 0
