@@ -16,8 +16,8 @@ def repeat():
         fri = float(input('Enter total number of hours worked for Friday: '))
         hours = float(mon+tue+wed+thr+fri)
         print('Your total hours for this week are', hours)
-        rpt = input('Are your hours correct? (y/n) ')
-        if rpt == 'y':
+        usr = input('Are your hours correct? (y/n) ')
+        if usr == 'y':
             print('These are the hours you entered')
         else:
             repeat()
