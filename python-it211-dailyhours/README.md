@@ -1,3 +1,3 @@
 # Daily Hour Tracker Program
 
-> This project tells the user the amount of ingredients needed to bake x amount of cookies
+> This project tracks the amount of hours the user works per day and gives the sum result to the user
