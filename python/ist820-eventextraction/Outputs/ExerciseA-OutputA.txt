@@ -1,0 +1,267 @@
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+2179  read(5<pipe:[24655]>,  <unfinished ...>
+
+2180  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+
+2180  read(0<pipe:[24654]>,  <unfinished ...>
+
+2179  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+
+2179  read(0</dev/tty1>,  <unfinished ...>
+
+2179  read(0</dev/tty1>,  <unfinished ...>
+
+947   read(0</dev/tty1>, "i", 1)        = 1
+
+947   read(0</dev/tty1>, "d", 1)        = 1
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+2181  read(3<pipe:[24698]>,  <unfinished ...>
+
+2181  read(3</lib/x86_64-linux-gnu/libselinux.so.1>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260Z\0\0\0\0\0\0"..., 832) = 832
+
+2181  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+
+2181  read(3</lib/x86_64-linux-gnu/libpcre.so.3.13.2>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+
+2181  read(3</lib/x86_64-linux-gnu/libdl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+
+2181  read(3</lib/x86_64-linux-gnu/libpthread-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+
+2181  read(3</proc/filesystems>, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 362
+
+2181  read(3</proc/filesystems>, "", 1024) = 0
+
+2181  read(3</etc/locale.alias>, "# Locale name alias data base.\n#"..., 4096) = 2995
+
+2181  read(3</etc/locale.alias>, "", 4096) = 0
+
+2181  read(3</etc/nsswitch.conf>, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 497
+
+2181  read(3</etc/nsswitch.conf>, "", 4096) = 0
+
+2181  read(3</lib/x86_64-linux-gnu/libnss_compat-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\22\0\0\0\0\0\0"..., 832) = 832
+
+2181  read(3</lib/x86_64-linux-gnu/libnsl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360?\0\0\0\0\0\0"..., 832) = 832
+
+2181  read(3</lib/x86_64-linux-gnu/libnss_nis-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260 \0\0\0\0\0\0"..., 832) = 832
+
+2181  read(3</lib/x86_64-linux-gnu/libnss_files-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+
+2181  read(3</proc/sys/kernel/ngroups_max>, "65536\n", 31) = 6
+
+2181  read(3</proc/sys/kernel/ngroups_max>, "65536\n", 31) = 6
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "n", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "m", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "-", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+2182  read(3<pipe:[24710]>,  <unfinished ...>
+
+2182  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+
+947   read(0</dev/tty1>, "h", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "d", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "t", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "\177", 1)     = 1
+
+947   read(0</dev/tty1>, "\177", 1)     = 1
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "s", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "\t", 1)       = 1
+
+947   read(3<pipe:[24720]>, "", 128)    = 0
+
+947   read(3<pipe:[24729]>, "user_file.txt\n", 128) = 14
+
+947   read(3<pipe:[24729]>, "", 128)    = 0
+
+947   read(0</tmp/sh-thd-487363107687375979 (deleted)>, "user_file.txt\n", 128) = 14
+
+947   read(0</tmp/sh-thd-487363107687375979 (deleted)>, "", 128) = 0
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+2185  read(3<pipe:[24738]>,  <unfinished ...>
+
+2185  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+
+2185  read(3</home/user/test/user_file.txt>, "", 8192) = 0
+
+947   read(0</dev/tty1>, "t", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "i", 1)        = 1
+
+947   read(0</dev/tty1>, "l", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "s", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "r", 1)        = 1
+
+947   read(0</dev/tty1>, "\t", 1)       = 1
+
+947   read(3<pipe:[24746]>, "", 128)    = 0
+
+947   read(3<pipe:[24755]>, "user_file.txt\n", 128) = 14
+
+947   read(3<pipe:[24755]>, "", 128)    = 0
+
+947   read(0</tmp/sh-thd-974726215050730439 (deleted)>, "user_file.txt\n", 128) = 14
+
+947   read(0</tmp/sh-thd-974726215050730439 (deleted)>, "", 128) = 0
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+2188  read(3<pipe:[24764]>,  <unfinished ...>
+
+2188  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+
+2188  read(3</home/user/test/user_file.txt>, "", 8192) = 0
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "c", 1)        = 1
+
+947   read(0</dev/tty1>, "h", 1)        = 1
+
+947   read(0</dev/tty1>, "o", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "\"", 1)       = 1
+
+947   read(0</dev/tty1>, "\"", 1)       = 1
+
+947   read(0</dev/tty1>, "\33", 1)      = 1
+
+947   read(0</dev/tty1>, "[", 1)        = 1
+
+947   read(0</dev/tty1>, "D", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "b", 1)        = 1
+
+947   read(0</dev/tty1>, "c", 1)        = 1
+
+947   read(0</dev/tty1>, "d", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "f", 1)        = 1
+
+947   read(0</dev/tty1>, "g", 1)        = 1
+
+947   read(0</dev/tty1>, "\33", 1)      = 1
+
+947   read(0</dev/tty1>, "[", 1)        = 1
+
+947   read(0</dev/tty1>, "C", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, ">", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "s", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "\t", 1)       = 1
+
+947   read(3<pipe:[24800]>,  <unfinished ...>
+
+947   read(3<pipe:[24809]>,  <unfinished ...>
+
+947   read(3<pipe:[24809]>,  <unfinished ...>
+
+947   read(0</tmp/sh-thd-1949452431612363480 (deleted)>, "user_file.txt\n", 128) = 14
+
+947   read(0</tmp/sh-thd-1949452431612363480 (deleted)>, "", 128) = 0
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+947   read(0</dev/tty1>, "h", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "d", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "s", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "\t", 1)       = 1
+
+947   read(3<pipe:[24823]>, "", 128)    = 0
+
+947   read(3<pipe:[24832]>, "user_file.txt\n", 128) = 14
+
+947   read(3<pipe:[24832]>, "", 128)    = 0
+
+947   read(0</tmp/sh-thd-3898904863123996143 (deleted)>, "user_file.txt\n", 128) = 14
+
+947   read(0</tmp/sh-thd-3898904863123996143 (deleted)>, "", 128) = 0
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+2195  read(3<pipe:[24841]>,  <unfinished ...>
+
+2195  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+
+2195  read(3</home/user/test/user_file.txt>, "abcdefg\n", 8192) = 8
+
+2195  read(3</home/user/test/user_file.txt>, "", 8192) = 0
+
+947   read(0</dev/tty1>,  <detached ...>
+
+Total number of events is 133

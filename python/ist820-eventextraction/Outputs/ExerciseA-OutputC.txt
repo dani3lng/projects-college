@@ -1,0 +1,158 @@
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+2179  read(0</dev/tty1>,  <unfinished ...>
+
+2179  read(0</dev/tty1>,  <unfinished ...>
+
+947   read(0</dev/tty1>, "i", 1)        = 1
+
+947   read(0</dev/tty1>, "d", 1)        = 1
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "n", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "m", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "-", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+947   read(0</dev/tty1>, "h", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "d", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "t", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "\177", 1)     = 1
+
+947   read(0</dev/tty1>, "\177", 1)     = 1
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "s", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "\t", 1)       = 1
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+947   read(0</dev/tty1>, "t", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "i", 1)        = 1
+
+947   read(0</dev/tty1>, "l", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "s", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "r", 1)        = 1
+
+947   read(0</dev/tty1>, "\t", 1)       = 1
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "c", 1)        = 1
+
+947   read(0</dev/tty1>, "h", 1)        = 1
+
+947   read(0</dev/tty1>, "o", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "\"", 1)       = 1
+
+947   read(0</dev/tty1>, "\"", 1)       = 1
+
+947   read(0</dev/tty1>, "\33", 1)      = 1
+
+947   read(0</dev/tty1>, "[", 1)        = 1
+
+947   read(0</dev/tty1>, "D", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "b", 1)        = 1
+
+947   read(0</dev/tty1>, "c", 1)        = 1
+
+947   read(0</dev/tty1>, "d", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "f", 1)        = 1
+
+947   read(0</dev/tty1>, "g", 1)        = 1
+
+947   read(0</dev/tty1>, "\33", 1)      = 1
+
+947   read(0</dev/tty1>, "[", 1)        = 1
+
+947   read(0</dev/tty1>, "C", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, ">", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "s", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "\t", 1)       = 1
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+947   read(0</dev/tty1>, "h", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "a", 1)        = 1
+
+947   read(0</dev/tty1>, "d", 1)        = 1
+
+947   read(0</dev/tty1>, " ", 1)        = 1
+
+947   read(0</dev/tty1>, "u", 1)        = 1
+
+947   read(0</dev/tty1>, "s", 1)        = 1
+
+947   read(0</dev/tty1>, "e", 1)        = 1
+
+947   read(0</dev/tty1>, "\t", 1)       = 1
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+947   read(0</dev/tty1>,  <detached ...>
+

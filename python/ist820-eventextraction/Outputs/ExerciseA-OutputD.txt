@@ -1,0 +1,18 @@
+947   read(0</dev/tty1>, "\r", 1)       = 1
+
+2134  read(0</dev/tty1>,  <unfinished ...>
+
+2134  read(0</dev/tty1>,  <unfinished ...>
+
+2134  read(0</dev/tty1>,  <unfinished ...>
+
+2134  read(0</dev/tty1>,  <unfinished ...>
+
+2134  read(0</dev/tty1>,  <unfinished ...>
+
+2134  read(0</dev/tty1>,  <unfinished ...>
+
+2134  read(0</dev/tty1>,  <unfinished ...>
+
+947   read(0</dev/tty1>,  <detached ...>
+
