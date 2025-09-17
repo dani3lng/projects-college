@@ -8,6 +8,8 @@ loga_pipetotal = 0
 logb_readtotal = 0
 logb_keytotal = 0
 logb_pipetotal = 0
+# name variable for text file
+name = input('Name text file: ')
 
 print('Starting Output A')
 # set file paths for logs
@@ -50,8 +52,9 @@ for line in lines:
 print(f"""Event                 LogA    LogB
 Read from a file:     {loga_readtotal}     {logb_readtotal}
 Read from a keyboard: {loga_keytotal}     {logb_keytotal}
-Read from pipe:       {loga_pipetotal}     {logb_pipetotal}""")
+Read from pipe:       {loga_pipetotal}     {logb_pipetotal}""", file=open(name, 'a'))
 
 # close the file 
 file1.close()
 file2.close()
+

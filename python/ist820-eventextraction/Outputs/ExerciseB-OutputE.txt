@@ -1,0 +1,122 @@
+The user provides the following keystrokes to the console: 
+\r
+The console shows the following message to the user's eyes: 
+\n
+The console shows the following message to the user's eyes: 
+Try to exec /bin/sh\n
+The console shows the following message to the user's eyes: 
+Read 112 bytes. buf is AAAAAAAAA
+The console shows the following message to the user's eyes: 
+No shell for you:(\n
+The user provides the following keystrokes to the console: 
+2134  read(0</dev/tty1>,  <unfinished ...>
+The user provides the following keystrokes to the console: 
+2134  read(0</dev/tty1>,  <unfinished ...>
+The console shows the following message to the user's eyes: 
+user\n
+The user provides the following keystrokes to the console: 
+2134  read(0</dev/tty1>,  <unfinished ...>
+The console shows the following message to the user's eyes: 
+--2018-09-13 11:22:36--  http://
+The console shows the following message to the user's eyes: 
+Connecting to 192.168.12.130:80.
+The console shows the following message to the user's eyes: 
+connected.\n
+The console shows the following message to the user's eyes: 
+HTTP request sent, awaiting resp
+The console shows the following message to the user's eyes: 
+200 OK\n
+The console shows the following message to the user's eyes: 
+Length: 
+The console shows the following message to the user's eyes: 
+249
+The console shows the following message to the user's eyes: 
+ [application/octet-stream]\n
+The console shows the following message to the user's eyes: 
+Saving to: 'remote_shell.elf'\n
+The console shows the following message to the user's eyes: 
+\n
+The console shows the following message to the user's eyes: 
+\r
+The console shows the following message to the user's eyes: 
+remote_shell.elf           0%[  
+The console shows the following message to the user's eyes: 
+\r
+The console shows the following message to the user's eyes: 
+remote_shell.elf         100%[==
+The console shows the following message to the user's eyes: 
+\n
+The console shows the following message to the user's eyes: 
+\n
+The console shows the following message to the user's eyes: 
+2018-09-13 11:22:36 (4.25 MB/s) 
+The user provides the following keystrokes to the console: 
+2134  read(0</dev/tty1>,  <unfinished ...>
+The console shows the following message to the user's eyes: 
+total 72\n
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  280 Aug 
+The console shows the following message to the user's eyes: 
+-rwsr-xr-x 1 root user 8736 Aug 
+The console shows the following message to the user's eyes: 
+-rwsr-xr-x 1 root user 8736 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  176 Sep 
+The console shows the following message to the user's eyes: 
+-rwxrwxr-x 1 user user 8768 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  357 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  112 Sep 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user   10 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  249 Sep 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  264 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  129 Sep 
+The console shows the following message to the user's eyes: 
+-rwxrwxr-x 1 user user   44 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user    0 Sep 
+The user provides the following keystrokes to the console: 
+2134  read(0</dev/tty1>,  <unfinished ...>
+The user provides the following keystrokes to the console: 
+2134  read(0</dev/tty1>,  <unfinished ...>
+The console shows the following message to the user's eyes: 
+total 72\n
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  280 Aug 
+The console shows the following message to the user's eyes: 
+-rwsr-xr-x 1 root user 8736 Aug 
+The console shows the following message to the user's eyes: 
+-rwsr-xr-x 1 root user 8736 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  176 Sep 
+The console shows the following message to the user's eyes: 
+-rwxrwxr-x 1 user user 8768 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  357 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  112 Sep 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user   10 Aug 
+The console shows the following message to the user's eyes: 
+-rwxrwxr-x 1 user user  249 Sep 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  264 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user  129 Sep 
+The console shows the following message to the user's eyes: 
+-rwxrwxr-x 1 user user   44 Aug 
+The console shows the following message to the user's eyes: 
+-rw-rw-r-- 1 user user    0 Sep 
+The user provides the following keystrokes to the console: 
+2134  read(0</dev/tty1>,  <unfinished ...>
+The console shows the following message to the user's eyes: 
+\n
+The console shows the following message to the user's eyes: 
+user@ubuntu:~/test$ 
+The user provides the following keystrokes to the console: 
+947   read(0</dev/tty1>,  <detached ...>
