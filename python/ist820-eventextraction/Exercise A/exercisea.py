@@ -10,14 +10,14 @@ def counter_read(term):
             total += 1
     print(f'Total number of events is {total}', file=open(name, 'a'))
 
-# log event counter for 'read from keyboard' events
+# log event for 'read from keyboard' events
 def log_key(term, term2):
     name = input('Name text file: ')
     for line in lines:
         if term in line and term2 in line:
             print(line, file=open(name, 'a'))
 
-# log event counter for 'read from file' events
+# log event for 'read from file' events
 def log_file(term, term2, term3):
     name = input('Name text file: ')
     for line in lines:

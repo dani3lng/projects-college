@@ -4,7 +4,7 @@ print('Starting Output G')
 # create a list for file names and counts
 file_names = []
 counts = []
-file_path = 'ist820-eventextraction/Outputs/ExerciseA-OutputE.txt'
+file_path = 'Outputs/ExerciseA-OutputE.txt'
 # open the file
 file1=open(file_path)
 # read content into memory object “lines” 
