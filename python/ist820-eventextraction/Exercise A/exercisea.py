@@ -156,7 +156,7 @@ file_path1 = 'Outputs/ExerciseA-OutputF.txt'
 file_path2 = 'Outputs/ExerciseB-OutputE.txt'
 user_input = input('Would you like to perform Output G: ')
 user_input = user_input.lower()
-name = 'ExerciseA-OutputG.txt'
+filename = 'ExerciseA-OutputG.txt'
 
 if user_input == 'y' or user_input =='yes':
     # open the file
@@ -181,11 +181,20 @@ if user_input == 'y' or user_input =='yes':
                 counts[i] += 1
                 # add new time
                 timestamps[i].append(idx)       
-    print(f'File Name    |    Counts', file=open(name, 'a'))
-    for i in range(len(file_names)):
-        print(f'''{file_names[i]} {counts[i]} {timestamps[i]}''', file=open(name, 'a'))
+    resultsG=[(file_names[i], counts[i], timestamps[i]) for i in range(len(file_names))]
+    # print(f'File Name    |    Counts    | Timestamps', file=open(name, 'a'))
+    # for i in range(len(file_names)):
+    #     print(f'''{file_names[i]} {counts[i]} {timestamps[i]}''', file=open(name, 'a'))
+    with open(filename, "a") as f:
+        f.write("\n******OutputG*****\n\n")
+        f.write("Unique files with one or more 'read from file' events:\n\n")
+        # Formats table for Output G
+        f.write("{:<50} {:<10} {}\n".format("File Name", "Count", "Timestamps"))
+        f.write("-" * 90 + "\n")
+        for name, count, times in resultsG:
+            f.write("{:<50} {:<10} {}\n".format(name, count, times))
         
-    # # close the file 
-    # file1.close()
-# else:
-#     pass
+    # close the file 
+    file1.close()
+else:
+    pass
