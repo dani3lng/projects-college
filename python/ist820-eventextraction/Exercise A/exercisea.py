@@ -156,17 +156,17 @@ file_path1 = 'Outputs/ExerciseA-OutputF.txt'
 file_path2 = 'Outputs/ExerciseB-OutputE.txt'
 user_input = input('Would you like to perform Output G: ')
 user_input = user_input.lower()
+name = 'ExerciseA-OutputG.txt'
+
 if user_input == 'y' or user_input =='yes':
     # open the file
     file1=open(file_path1)
-    file2=open(file_path2)
     # read content into memory object “lines” 
-    lines1=file1.readlines()
-    lines2=file2.readlines()
+    lines=file1.readlines()
     # find file names
     if ' read(' in lines and '<' in lines and '>' in lines:
-        file_name_start = lines.find('<')
-        file_name_end = lines.find('>')
+        file_name_start = lines.find("<")
+        file_name_end = lines.find(">")
         file_name = lines[file_name_start + 1 : file_name_end]
         # add file names to list
         if file_name not in file_names:
@@ -174,10 +174,16 @@ if user_input == 'y' or user_input =='yes':
             counts.append(1)
             # Starts list with current time.
             timestamps.append([idx])
-    print(file_names)
-    print(f'File Name    |    Counts')
+        else:
+            i = file_names.index(file_name)
+            counts[i] += 1
+            # add new time
+            timestamps[i].append(idx)       
+       
     for i in range(len(file_names)):
-        print(file_name + '\t' + '\t' + counts)
+        print(f'File Name    |    Counts')
+        print(file_names[i] + '\t' + '\t' + counts[i] + timestamps[i], file=open(name, 'a'))
+        
     # close the file 
     file1.close()
 else:
