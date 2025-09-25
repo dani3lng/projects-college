@@ -162,29 +162,30 @@ if user_input == 'y' or user_input =='yes':
     # open the file
     file1=open(file_path1)
     # read content into memory object “lines” 
-    lines=file1.readlines()
+    lines1=file1.readlines()
     # find file names
-    if ' read(' in lines and '<' in lines and '>' in lines:
-        file_name_start = lines.find("<")
-        file_name_end = lines.find(">")
-        file_name = lines[file_name_start + 1 : file_name_end]
-        # add file names to list
-        if file_name not in file_names:
-            file_names.append(file_name)
-            counts.append(1)
-            # Starts list with current time.
-            timestamps.append([idx])
-        else:
-            i = file_names.index(file_name)
-            counts[i] += 1
-            # add new time
-            timestamps[i].append(idx)       
-       
+    for line in lines1:
+        if "read(" in line and "<" in line and ">" in line:
+            file_name_start = line.find('<')
+            file_name_end = line.find('>')
+            file_name = line[file_name_start + 1 : file_name_end]
+            # add file names to list
+            if file_name not in file_names:
+                file_names.append(file_name)
+                counts.append(1)
+                # Starts list with current time.
+                idx = file_names.index(file_name)
+                timestamps.append([idx])
+            else:
+                i = file_names.index(file_name)
+                counts[i] += 1
+                # add new time
+                timestamps[i].append(idx)       
+    print(f'File Name    |    Counts', file=open(name, 'a'))
     for i in range(len(file_names)):
-        print(f'File Name    |    Counts')
-        print(file_names[i] + '\t' + '\t' + counts[i] + timestamps[i], file=open(name, 'a'))
+        print(f'''{file_names[i]} {counts[i]} {timestamps[i]}''', file=open(name, 'a'))
         
-    # close the file 
-    file1.close()
-else:
-    pass
+    # # close the file 
+    # file1.close()
+# else:
+#     pass
