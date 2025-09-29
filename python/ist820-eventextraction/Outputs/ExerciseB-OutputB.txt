@@ -1,0 +1,30 @@
+
+******Exercise B Output B*****
+
+Total counter for various events:
+
+Event                          LogA       LogB
+------------------------------------------------------------------------------------------
+Total number of 'a program starts running': 7          10
+Total number of 'write events': 109        109
+Total number of 'get file/directory status': 103        175
+
+******Exercise B Output B*****
+
+Total counter for various events:
+
+Event                          LogA       LogB
+------------------------------------------------------------------------------------------
+Total number of 'a program starts running': 7          10
+Total number of 'write events': 109        109
+Total number of 'get file/directory status': 103        175
+
+******Exercise B Output B*****
+
+Total counter for various events:
+
+Event                                              LogA       LogB
+------------------------------------------------------------------------------------------
+Total number of 'a program starts running':        7          10
+Total number of 'write events':                    109        109
+Total number of 'get file/directory status':       103        175

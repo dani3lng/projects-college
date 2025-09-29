@@ -1,4 +1,10 @@
-Event                 LogA    LogB
-Read from a file:     133     118
-Read from a keyboard: 501     113
-Read from pipe:       155     41
+
+******Exercise B Output A*****
+
+Various 'Read from' events:
+
+Event                          LogA       LogB
+------------------------------------------------------------------------------------------
+Read from a file:              133        118
+Read from a keyboard:          501        113
+Read from pipe:                155        41
