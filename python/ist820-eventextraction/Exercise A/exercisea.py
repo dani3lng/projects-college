@@ -182,9 +182,8 @@ if user_input == 'y' or user_input =='yes':
                 # add new time
                 timestamps[i].append(idx)       
     resultsG=[(file_names[i], counts[i], timestamps[i]) for i in range(len(file_names))]
-    # print(f'File Name    |    Counts    | Timestamps', file=open(name, 'a'))
-    # for i in range(len(file_names)):
-    #     print(f'''{file_names[i]} {counts[i]} {timestamps[i]}''', file=open(name, 'a'))
+    
+    # output text file
     with open(filename, "a") as f:
         f.write("\n******OutputG*****\n\n")
         f.write("Unique files with one or more 'read from file' events:\n\n")

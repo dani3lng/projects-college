@@ -12,8 +12,8 @@ program_unlink_logb = []
 program_end_loga = [] 
 program_end_logb = [] 
 
-# name = input('Name text file: ')
-print('Starting Output A')
+filename = input('Name text file: ')
+print('Starting Output B')
 # set file paths for logs
 file_path1 = 'DataSource/LogA.strace'
 file_path2 = 'DataSource/LogB.strace'
@@ -90,22 +90,30 @@ for line in lines1:
             position_b = line.find("'", position_a + 1)
             name = line[position_a + 1 : position_b]
             program_unlink_loga.append(name) 
-            programunlink_logalen = len(program_unlink_loga)
+            programunlink_logacount = len(program_unlink_loga)
 for line in lines2:
       if term5 in line:
             position_a = line.find("'")
             position_b = line.find("'", position_a + 1)
             name = line[position_a + 1 : position_b]
             program_unlink_logb.append(name) 
-            programunlink_logblen = len(program_unlink_logb)
+            programunlink_logbcount = len(program_unlink_logb)
             
 # create output table
-print(f"""Event                                           LogA    LogB
-Total number of 'a program starts running':     {programexec_logalen}     {programexec_logblen}
-Total number of 'write events':                 {programwrite_logalen}    {programwrite_logalen}
-Total number of 'get file/directory status':    {programget_logalen}      {programget_logblen}
-Total number of 'file unlinking':               {programunlink_logalen}   {programunlink_logblen} """)
+# print(f"""Event                                           LogA    LogB
+# Total number of 'a program starts running':     {programexec_logalen}     {programexec_logblen}
+# Total number of 'write events':                 {programwrite_logalen}    {programwrite_logalen}
+# Total number of 'get file/directory status':    {programget_logalen}      {programget_logblen}
+# Total number of 'file unlinking':               {programunlink_logalen}   {programunlink_logblen}""", file=open(name, 'a'))
 
-
-
-# Read from pipe:       {loga_pipetotal}     {logb_pipetotal}""", file=open(name, 'a'))
+# create output table
+with open(filename, "a") as f:
+      f.write("\n******Exercise B Output B*****\n\n")
+      f.write("Total counter for various events:\n\n")
+      # Formats table for Output B
+      f.write("{:<50} {:<10} {}\n".format("Event", "LogA", "LogB"))
+      f.write("-" * 90 + "\n")
+      f.write("{:<50} {:<10} {}\n".format("Total number of 'a program starts running':", programexec_logalen, programexec_logblen))
+      f.write("{:<50} {:<10} {}\n".format("Total number of 'write events':", programwrite_logalen, programwrite_logalen))
+      f.write("{:<50} {:<10} {}\n".format("Total number of 'get file/directory status':", programget_logalen, programget_logblen))
+      f.write("{:<50} {:<10} {}\n".format("Total number of 'file unlinking':", programunlink_logacount, programunlink_logbcount))

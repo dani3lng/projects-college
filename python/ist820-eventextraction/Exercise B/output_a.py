@@ -9,7 +9,7 @@ logb_readtotal = 0
 logb_keytotal = 0
 logb_pipetotal = 0
 # name variable for text file
-name = input('Name text file: ')
+filename = input('Name text file: ')
 
 print('Starting Output A')
 # set file paths for logs
@@ -49,11 +49,16 @@ for line in lines:
             logb_pipetotal += 1
 
 # create output table
-print(f"""Event                 LogA    LogB
-Read from a file:     {loga_readtotal}     {logb_readtotal}
-Read from a keyboard: {loga_keytotal}     {logb_keytotal}
-Read from pipe:       {loga_pipetotal}     {logb_pipetotal}""", file=open(name, 'a'))
-
+with open(filename, "a") as f:
+      f.write("\n******Exercise B Output A*****\n\n")
+      f.write("Various 'Read from' events:\n\n")
+      # Formats table for Output A
+      f.write("{:<30} {:<10} {}\n".format("Event", "LogA", "LogB"))
+      f.write("-" * 90 + "\n")
+      f.write("{:<30} {:<10} {}\n".format("Read from a file:", loga_readtotal, logb_readtotal))
+      f.write("{:<30} {:<10} {}\n".format("Read from a keyboard:", loga_keytotal, logb_keytotal))
+      f.write("{:<30} {:<10} {}\n".format("Read from pipe:", loga_pipetotal, logb_pipetotal))
+      
 # close the file 
 file1.close()
 file2.close()
