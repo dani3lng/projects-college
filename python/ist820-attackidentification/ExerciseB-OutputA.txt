@@ -1,0 +1,349 @@
+
+******OutputA*****
+
+'Download malicious code' Event Sequences:
+
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+617        2181  open("/etc/group", O_RDONLY|O_CLOEXEC) = 3</etc/group>
+ 624        2181  write(1</dev/tty1>, "uid=1000(user) gid=1000(user) gr"..., 123) = 123
+625        2181  close(1</dev/tty1>)               = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+794        2182  open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3</usr/lib/locale/locale-archive>
+ 803        2182  write(1</dev/tty1>, "Linux ubuntu 4.4.0-131-generic #"..., 107) = 107
+804        2182  close(1</dev/tty1>)               = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+892        947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 903        947   write(1</dev/null>, "2", 1)       = 1
+906        947   close(11</dev/tty1>)              = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+916        947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 927        947   write(1</dev/null>, "2", 1)       = 1
+930        947   close(11</dev/tty1>)              = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1043       947   open("/tmp/sh-thd-487363107687375979", O_RDONLY) = 4</tmp/sh-thd-487363107687375979>
+ 1042       947   write(3</tmp/sh-thd-487363107687375979>, "\n", 1) = 1
+1044       947   close(3</tmp/sh-thd-487363107687375979>) = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1061       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1078       947   write(2</dev/tty1>, "\n", 1)      = 1
+1107       947   close(3<pipe:[24738]>)            = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1246       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1257       947   write(1</dev/null>, "2", 1)       = 1
+1260       947   close(11</dev/tty1>)              = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1270       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1281       947   write(1</dev/null>, "2", 1)       = 1
+1284       947   close(11</dev/tty1>)              = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1397       947   open("/tmp/sh-thd-974726215050730439", O_RDONLY) = 4</tmp/sh-thd-974726215050730439>
+ 1396       947   write(3</tmp/sh-thd-974726215050730439>, "\n", 1) = 1
+1398       947   close(3</tmp/sh-thd-974726215050730439>) = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1415       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1432       947   write(2</dev/tty1>, "\n", 1)      = 1
+1461       947   close(3<pipe:[24764]>)            = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1650       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1661       947   write(1</dev/null>, "4", 1)       = 1
+1664       947   close(11</dev/tty1>)              = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1674       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1685       947   write(1</dev/null>, "4", 1)       = 1
+1688       947   close(11</dev/tty1>)              = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1804       947   open("/tmp/sh-thd-1949452431612363480", O_RDONLY) = 4</tmp/sh-thd-1949452431612363480>
+ 1803       947   write(3</tmp/sh-thd-1949452431612363480>, "\n", 1) = 1
+1805       947   close(3</tmp/sh-thd-1949452431612363480>) = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1849       947   open("user_file.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</home/user/test/user_file.txt>
+ 1839       947   write(2</dev/tty1>, "\n", 1)      = 1
+1855       947   close(3</home/user/test/user_file.txt>) = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1922       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1933       947   write(1</dev/null>, "2", 1)       = 1
+1936       947   close(11</dev/tty1>)              = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1946       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1957       947   write(1</dev/null>, "2", 1)       = 1
+1960       947   close(11</dev/tty1>)              = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+2073       947   open("/tmp/sh-thd-3898904863123996143", O_RDONLY) = 4</tmp/sh-thd-3898904863123996143>
+ 2072       947   write(3</tmp/sh-thd-3898904863123996143>, "\n", 1) = 1
+2074       947   close(3</tmp/sh-thd-3898904863123996143>) = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+2091       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 2108       947   write(2</dev/tty1>, "\n", 1)      = 1
+2137       947   close(3<pipe:[24841]>)            = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+2191       2195  open("user_file.txt", O_RDONLY)   = 3</home/user/test/user_file.txt>
+ 2195       2195  write(1</dev/tty1>, "abcdefg\n", 8) = 8
+2197       2195  close(3</home/user/test/user_file.txt>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+213        2133  open("in.txt", O_RDONLY)          = 3</home/user/test/in.txt>
+ 218        2133  write(1<pipe:[24192]>, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"..., 112) = 112
+221        2133  close(3</home/user/test/in.txt>)  = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+446        2135  open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 3</etc/passwd>
+ 455        2135  write(1</dev/tty1>, "user\n", 5)  = 5
+456        2135  close(1</dev/tty1>)               = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+705        2136  open("/usr/lib/charset.alias", O_RDONLY|O_NOFOLLOW) = -1 ENOENT (No such file or directory)
+ 718        2136  write(2</dev/tty1>, "\n", 1)      = 1
+719        2136  close(4</home/user/test/remote_shell.elf>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+957        2137  open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 3</etc/localtime>
+ 956        2137  write(1</dev/tty1>, "total 72\n", 9) = 9
+963        2137  close(3</etc/localtime>)          = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1271       2139  open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 3</etc/localtime>
+ 1270       2139  write(1</dev/tty1>, "total 72\n", 9) = 9
+1277       2139  close(3</etc/localtime>)          = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1783       2140  open("user_file.txt", O_RDONLY)   = 5</home/user/test/user_file.txt>
+ 1874       2140  write(4<anon_inode:[eventfd]>, "\1\0\0\0\0\0\0\0", 8) = 8
+1883       2140  close(3<socket:[24314]>)          = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+500        947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 511        947   write(1</dev/null>, "2", 1)       = 1
+514        947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+524        947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 535        947   write(1</dev/null>, "2", 1)       = 1
+538        947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+680        947   open("/tmp/sh-thd-7797809726659068628", O_RDONLY) = 4</tmp/sh-thd-7797809726659068628>
+ 679        947   write(3</tmp/sh-thd-7797809726659068628>, "\n", 1) = 1
+681        947   close(3</tmp/sh-thd-7797809726659068628>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+728        947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 725        947   write(2</dev/tty1>, "h", 1)       = 1
+734        947   close(3</home/user/test>)         = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+761        947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 772        947   write(1</dev/null>, "4", 1)       = 1
+775        947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+785        947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 796        947   write(1</dev/null>, "4", 1)       = 1
+799        947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+915        947   open("/tmp/sh-thd-15595619451645727032", O_RDONLY) = 4</tmp/sh-thd-15595619451645727032>
+ 914        947   write(3</tmp/sh-thd-15595619451645727032>, "\n", 1) = 1
+916        947   close(3</tmp/sh-thd-15595619451645727032>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+933        947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 950        947   write(2</dev/tty1>, "\n", 1)      = 1
+1014       947   close(3<pipe:[25584]> <unfinished ...>
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1100       2278  open("user_file.txt", O_RDONLY)   = 3</home/user/test/user_file.txt>
+ 1105       2278  write(1</home/user/test/machine_info.txt>, "abcdefg\n", 8) = 8
+1108       2278  close(3</home/user/test/user_file.txt>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1221       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1232       947   write(1</dev/null>, "4", 1)       = 1
+1235       947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1245       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1256       947   write(1</dev/null>, "4", 1)       = 1
+1259       947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1401       947   open("/tmp/sh-thd-12744494828928198846", O_RDONLY) = 4</tmp/sh-thd-12744494828928198846>
+ 1400       947   write(3</tmp/sh-thd-12744494828928198846>, "\n", 1) = 1
+1402       947   close(3</tmp/sh-thd-12744494828928198846>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1419       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1436       947   write(2</dev/tty1>, "\n", 1)      = 1
+1454       947   close(3<pipe:[25637]>)            = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1530       2282  open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3</usr/lib/locale/locale-archive>
+ 1538       2282  write(1</home/user/test/machine_info.txt>, "Linux ubuntu 4.4.0-131-generic #"..., 107) = 107
+1539       2282  close(1</home/user/test/machine_info.txt>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1679       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1690       947   write(1</dev/null>, "4", 1)       = 1
+1693       947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1703       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1714       947   write(1</dev/null>, "4", 1)       = 1
+1717       947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1833       947   open("/tmp/sh-thd-7042245585197944667", O_RDONLY) = 4</tmp/sh-thd-7042245585197944667>
+ 1832       947   write(3</tmp/sh-thd-7042245585197944667>, "\n", 1) = 1
+1834       947   close(3</tmp/sh-thd-7042245585197944667>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1851       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 1868       947   write(2</dev/tty1>, "\n", 1)      = 1
+1886       947   close(3<pipe:[25669]>)            = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1984       2286  open("/etc/iproute2/rt_scopes", O_RDONLY) = 4</etc/iproute2/rt_scopes>
+ 1983       2286  write(1</home/user/test/machine_info.txt>, "1: lo: <LOOPBACK,UP,LOWER_UP> mt"..., 147) = 147
+1988       2286  close(4</etc/iproute2/rt_scopes>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+2071       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 2082       947   write(1</dev/null>, "2", 1)       = 1
+2085       947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+2095       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 2106       947   write(1</dev/null>, "2", 1)       = 1
+2109       947   close(11</dev/tty1>)              = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+2222       947   open("/tmp/sh-thd-14084491169441769759", O_RDONLY) = 4</tmp/sh-thd-14084491169441769759>
+ 2221       947   write(3</tmp/sh-thd-14084491169441769759>, "\n", 1) = 1
+2223       947   close(3</tmp/sh-thd-14084491169441769759>) = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+2240       947   open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3</dev/null>
+ 2257       947   write(2</dev/tty1>, "\n", 1)      = 1
+2286       947   close(3<pipe:[25722]>)            = 0
+
+******Log B*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+2340       2290  open("machine_info.txt", O_RDONLY) = 3</home/user/test/machine_info.txt>
+ 2366       2290  write(1</dev/tty1>, "       valid_lft forever preferr"..., 47) = 47
+2367       2290  close(3</home/user/test/machine_info.txt>) = 0

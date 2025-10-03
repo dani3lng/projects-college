@@ -2,12 +2,9 @@
 
 # variables
 filename = 'ExerciseB-OutputA.txt'
-stat_pid = None
-stat_line_num = None
-stat_line = None
-clone_pid = None
-clone_line_num = None
-clone_line = None
+term1 = ' stat('
+term2 = ' clone('
+term3 = ' close('
 
 # pid function
 def pid_from_line(line):
@@ -15,50 +12,170 @@ def pid_from_line(line):
     pid = line[0 : idx]
     return pid
 
-# establish log path
-file_path = 'data/LogA.strace'
-# open the file
-file=open(file_path)
-# read content into memory object “lines” 
-lines=file.readlines()
-
 # textfile header
 with open(filename, 'a')  as f:
-                f.write("\n******OutputA*****\n\n")
-                f.write("'Stat' and 'Clone' Event Sequences:\n\n")
-                # Format table for output
-                f.write("{:<10} {:<10} \n".format("Timestamp", "Log Entry"))
-                f.write("-" * 90  )
+    f.write("\n******OutputA*****\n\n")
+    f.write("'Download malicious code' Event Sequences:\n\n")
+    # Format table for output
+    f.write("{:<10} {:<10} \n".format("Timestamp", "Log Entry"))
+    f.write("-" * 90  )
 
-# find 'stat' and 'clone' events
-term1 = ' stat('
-term2 = ' clone('
-line_num = 1
-for line in lines:
-    if term1 in line:
-        stat_pid = pid_from_line(line)
-        stat_line_num = line_num
-        stat_line = line
-    elif term2 in line:
-        clone_pid = pid_from_line(line)
-        clone_line_num = line_num
-        clone_line = line
-        if clone_pid == stat_pid:
-            # output results to console
-            print(str(stat_line_num) + '\t' + stat_line)
-            print(str(clone_line_num) + '\t' + clone_line)
-            # output results to textfile
-            with open(filename, 'a')  as f:
-                f.write("\n{:<10} {:<10} ".format(stat_line_num, stat_line))
-                f.write("{:<10} {:<10} \n".format(clone_line_num, clone_line))
-            # clean variables
-            stat_pid = None
-            stat_line_num = None
-            stat_line = None
-            clone_pid = None
-            clone_line_num = None
-            clone_line = None
-    line_num += 1        
+# find events in LogA
+def logA(lines1):
+    pids = [None, None, None]
+    line_nums = [None, None, None]
+    line_strs = [None, None, None]
+    kw_found = [False, False, False] 
+    line_num = 1
+    for line in lines1:
+        if 'open(' in line:
+            kw_found[0] = True
+            pids[0] = pid_from_line(line)
+            line_nums[0] = line_num
+            line_strs[0] = line
+        elif 'write(' in line:
+            if kw_found[0]:
+                pid = pid_from_line(line)
+                if pid == pids[0]:
+                    kw_found[1] = True
+                    pids[1] = pid_from_line(line)
+                    line_nums[1] = line_num
+                    line_strs[1] = line 
+        elif 'close(' in line:
+            if kw_found[1]:
+                pid = pid_from_line(line)
+                if pid == pids[1]:
+                    kw_found[2] = True
+                    pids[2] = pid_from_line(line)
+                    line_nums[2] = line_num
+                    line_strs[2] = line
+                    if kw_found[0] and kw_found[1] and kw_found[2] == True:
+                        print(line_num, line_strs)
+                        # output results to textfile
+                        with open(filename, 'a')  as f:
+                            f.write("\n******Log A*****\n")
+                            f.write("{:<10} {:<10} \n".format("Timestamp", "Log Entry"))
+                            f.write("-" * 90  )
+                            f.write("\n{:<10} {:<5} ".format(line_nums[0], line_strs[0]))
+                            f.write("{:<10} {:<5}".format(line_nums[1], line_strs[1])) 
+                            f.write("{:<10} {:<5}".format(line_nums[2], line_strs[2])) 
+                        # clean variables
+                        pids = [None, None, None]
+                        line_nums = [None, None, None]
+                        line_strs = [None, None, None]
+                        kw_found = [False, False, False]        
+        line_num += 1        
 
+# find events in LogB
+def logB(lines2):
+    pids = [None, None, None]
+    line_nums = [None, None, None]
+    line_strs = [None, None, None]
+    kw_found = [False, False, False] 
+    line_num = 1
+    for line in lines2:
+        if 'open(' in line:
+            kw_found[0] = True
+            pids[0] = pid_from_line(line)
+            line_nums[0] = line_num
+            line_strs[0] = line
+        elif 'write(' in line:
+            if kw_found[0]:
+                pid = pid_from_line(line)
+                if pid == pids[0]:
+                    kw_found[1] = True
+                    pids[1] = pid_from_line(line)
+                    line_nums[1] = line_num
+                    line_strs[1] = line 
+        elif 'close(' in line:
+            if kw_found[1]:
+                pid = pid_from_line(line)
+                if pid == pids[1]:
+                    kw_found[2] = True
+                    pids[2] = pid_from_line(line)
+                    line_nums[2] = line_num
+                    line_strs[2] = line
+                    if kw_found[0] and kw_found[1] and kw_found[2] == True:
+                        print(line_num, line_strs)
+                        # output results to textfile
+                        with open(filename, 'a')  as f:
+                            f.write("\n******Log B*****\n")
+                            f.write("{:<10} {:<10} \n".format("Timestamp", "Log Entry"))
+                            f.write("-" * 90  )
+                            f.write("\n{:<10} {:<5} ".format(line_nums[0], line_strs[0]))
+                            f.write("{:<10} {:<5}".format(line_nums[1], line_strs[1])) 
+                            f.write("{:<10} {:<5}".format(line_nums[2], line_strs[2])) 
+                        # clean variables
+                        pids = [None, None, None]
+                        line_nums = [None, None, None]
+                        line_strs = [None, None, None]
+                        kw_found = [False, False, False]        
+        line_num += 1
+        
+# find events in LogC
+def logC(lines3):
+    pids = [None, None, None]
+    line_nums = [None, None, None]
+    line_strs = [None, None, None]
+    kw_found = [False, False, False] 
+    line_num = 1
+    for line in lines3:
+        if 'open(' in line:
+            kw_found[0] = True
+            pids[0] = pid_from_line(line)
+            line_nums[0] = line_num
+            line_strs[0] = line
+        elif 'write(' in line:
+            if kw_found[0]:
+                pid = pid_from_line(line)
+                if pid == pids[0]:
+                    kw_found[1] = True
+                    pids[1] = pid_from_line(line)
+                    line_nums[1] = line_num
+                    line_strs[1] = line 
+        elif 'close(' in line:
+            if kw_found[1]:
+                pid = pid_from_line(line)
+                if pid == pids[1]:
+                    kw_found[2] = True
+                    pids[2] = pid_from_line(line)
+                    line_nums[2] = line_num
+                    line_strs[2] = line
+                    if kw_found[0] and kw_found[1] and kw_found[2] == True:
+                        print(line_num, line_strs)
+                        # output results to textfile
+                        with open(filename, 'a')  as f:
+                            f.write("\n******Log B*****\n")
+                            f.write("{:<10} {:<10} \n".format("Timestamp", "Log Entry"))
+                            f.write("-" * 90  )
+                            f.write("\n{:<10} {:<5} ".format(line_nums[0], line_strs[0]))
+                            f.write("{:<10} {:<5}".format(line_nums[1], line_strs[1])) 
+                            f.write("{:<10} {:<5}".format(line_nums[2], line_strs[2])) 
+                        # clean variables
+                        pids = [None, None, None]
+                        line_nums = [None, None, None]
+                        line_strs = [None, None, None]
+                        kw_found = [False, False, False]        
+        line_num += 1
+                
+# establish log path
+file_path1 = 'data/LogA.strace'
+file_path2 = 'data/LogB.strace'
+file_path3 = 'data/LogC.strace'
+# open the file
+file1=open(file_path1)
+file2=open(file_path2)
+file3=open(file_path3)
+# read content into memory object “lines” 
+lines1=file1.readlines()
+lines2=file2.readlines()
+lines3=file3.readlines()
 # close file
-file.close()
+file1.close()
+file2.close()
+file3.close()
+
+# run log scans
+logA(lines1)
+logB(lines2)
+logC(lines3)

@@ -1,0 +1,131 @@
+
+******OutputC*****
+
+3-stage Event Sequences:
+
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+875        947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 879        947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+881        947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+883        947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 887        947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+889        947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+959        2183  open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 963        2183  getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+965        2183  close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1011       2184  open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1015       2184  getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1017       2184  close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1229       947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1233       947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1235       947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1237       947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1241       947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1243       947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1313       2186  open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1317       2186  getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1319       2186  close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1365       2187  open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1369       2187  getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1371       2187  close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1617       947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1621       947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1623       947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1625       947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1629       947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1631       947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1633       947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1637       947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1639       947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1641       947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1645       947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1647       947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1724       2190  open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1728       2190  getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1730       2190  close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1777       2191  open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1781       2191  getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1783       2191  close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1905       947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1909       947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1911       947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1913       947   open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1917       947   getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1919       947   close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1989       2193  open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 1993       2193  getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+1995       2193  close(3</home/user/test>)         = 0
+
+******Log A*****
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+2041       2194  open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3</home/user/test>
+ 2045       2194  getdents(3</home/user/test>, /* 0 entries */, 32768) = 0
+2047       2194  close(3</home/user/test>)         = 0
