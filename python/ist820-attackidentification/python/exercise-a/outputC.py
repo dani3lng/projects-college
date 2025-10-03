@@ -38,10 +38,6 @@ for line in lines:
         line_strs[0] = line
     elif 'getdents(' in line:
         if kw_found[0] == True:
-            
-            # test
-            print('kw found 0 is true')
-            
             pid = pid_from_line(line)
             if pid == pids[0]:
                 kw_found[1] = True

@@ -35,11 +35,11 @@ term1 = ' stat('
 term2 = ' clone('
 line_num = 1
 for line in lines:
-    if term1 in line:
+    if ' stat(' in line:
         stat_pid = pid_from_line(line)
         stat_line_num = line_num
         stat_line = line
-    elif term2 in line:
+    elif ' clone(' in line:
         clone_pid = pid_from_line(line)
         clone_line_num = line_num
         clone_line = line

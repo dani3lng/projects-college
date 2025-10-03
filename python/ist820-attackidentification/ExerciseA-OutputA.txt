@@ -1,0 +1,30 @@
+
+******OutputA*****
+
+'Stat' and 'Clone' Event Sequences:
+
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+305        947   stat("/usr/bin/id", {st_mode=S_IFREG|0755, st_size=39760, ...}) = 0
+ 313        947   clone( <unfinished ...>
+ 
+
+721        947   stat("/bin/uname", {st_mode=S_IFREG|0755, st_size=31440, ...}) = 0
+ 729        947   clone( <unfinished ...>
+ 
+
+1074       947   stat("/home/user/test/user_file.txt", {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+ 1092       947   clone( <unfinished ...>
+ 
+
+1428       947   stat("/home/user/test/user_file.txt", {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+ 1446       947   clone( <unfinished ...>
+ 
+
+1835       947   stat("/home/user/test/user_file.txt", {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+ 1971       947   clone( <unfinished ...>
+ 
+
+2104       947   stat("/home/user/test/user_file.txt", {st_mode=S_IFREG|0664, st_size=8, ...}) = 0
+ 2122       947   clone( <unfinished ...>
+ 
