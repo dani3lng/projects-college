@@ -37,7 +37,7 @@ with open(filename, 'a') as f:
     f.write("{:<10} {:<10} \n".format("Timestamp", "Log Entry"))
     f.write("-" * 90  )
 # find 'stat' and 'clone' events
-term1 = ' stat('
+term1 = 'stat('
 term2 = ' clone('
 line_num = 1
 for line in lines1:
@@ -73,7 +73,7 @@ with open(filename, 'a') as f:
     f.write("{:<10} {:<10} \n".format("Timestamp", "Log Entry"))
     f.write("-" * 90  )
 # find 'stat' and 'clone' events
-term1 = ' stat('
+term1 = 'stat('
 term2 = ' clone('
 line_num = 1
 for line in lines2:

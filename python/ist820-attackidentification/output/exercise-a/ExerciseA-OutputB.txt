@@ -44,7 +44,11 @@ Timestamp  Log Entry
  321        947   clone( <unfinished ...>
  
 
-711        947   stat("/home/user/test/user_file.txt", {st_mode=S_IFREG|0664, st_size=8, ...}) = 0
+492        947   fstat(3</home/user/test>, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+ 549        947   clone( <unfinished ...>
+ 
+
+753        947   fstat(3</home/user/test>, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
  810        947   clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f243cfb19d0) = 2276
  
 
@@ -52,22 +56,26 @@ Timestamp  Log Entry
  998        947   clone( <unfinished ...>
  
 
-1432       947   stat("/home/user/test/machine_info.txt", {st_mode=S_IFREG|0664, st_size=8, ...}) = 0
+1213       947   fstat(3</home/user/test>, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+ 1270       947   clone( <unfinished ...>
+ 
+
+1433       947   lstat("machine_info.txt", {st_mode=S_IFREG|0664, st_size=8, ...}) = 0
  1450       947   clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f243cfb19d0) = 2282
  
 
-1621       947   stat("/usr/share/bash-completion/completions/ip", {st_mode=S_IFREG|0644, st_size=9766, ...}) = 0
+1671       947   fstat(3</home/user/test>, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
  1728       947   clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f243cfb19d0) = 2284
  
 
-1864       947   stat("/home/user/test/machine_info.txt", {st_mode=S_IFREG|0664, st_size=107, ...}) = 0
+1865       947   lstat("machine_info.txt", {st_mode=S_IFREG|0664, st_size=107, ...}) = 0
  1882       947   clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f243cfb19d0) = 2286
  
 
-2007       947   stat("/var/mail/user", 0x7ffe93d47290) = -1 ENOENT (No such file or directory)
+2063       947   fstat(3</home/user/test>, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
  2120       947   clone( <unfinished ...>
  
 
-2253       947   stat("/home/user/test/machine_info.txt", {st_mode=S_IFREG|0664, st_size=672, ...}) = 0
+2254       947   lstat("machine_info.txt", {st_mode=S_IFREG|0664, st_size=672, ...}) = 0
  2271       947   clone( <unfinished ...>
  

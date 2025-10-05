@@ -13,18 +13,30 @@ Timestamp  Log Entry
  729        947   clone( <unfinished ...>
  
 
-1074       947   stat("/home/user/test/user_file.txt", {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+884        947   fstat(3</home/user/test>, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+ 941        947   clone( <unfinished ...>
+ 
+
+1075       947   lstat("user_file.txt", {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
  1092       947   clone( <unfinished ...>
  
 
-1428       947   stat("/home/user/test/user_file.txt", {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+1238       947   fstat(3</home/user/test>, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+ 1295       947   clone( <unfinished ...>
+ 
+
+1429       947   lstat("user_file.txt", {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
  1446       947   clone( <unfinished ...>
  
 
-1835       947   stat("/home/user/test/user_file.txt", {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+1642       947   fstat(3</home/user/test>, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+ 1699       947   clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f243cfb19d0) = 2190
+ 
+
+1914       947   fstat(3</home/user/test>, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
  1971       947   clone( <unfinished ...>
  
 
-2104       947   stat("/home/user/test/user_file.txt", {st_mode=S_IFREG|0664, st_size=8, ...}) = 0
+2105       947   lstat("user_file.txt", {st_mode=S_IFREG|0664, st_size=8, ...}) = 0
  2122       947   clone( <unfinished ...>
  
