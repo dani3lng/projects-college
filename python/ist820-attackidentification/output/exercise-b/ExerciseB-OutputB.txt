@@ -1,0 +1,14 @@
+
+******OutputB*****
+
+'Modify Permission' Event Sequences:
+
+
+******Log A******
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+******Log B******
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1020       2138  open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3</lib/x86_64-linux-gnu/libc-2.23.so>
+ 1040       2138  fchmodat(AT_FDCWD, "remote_shell.elf", 0775) = 0
