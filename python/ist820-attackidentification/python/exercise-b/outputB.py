@@ -3,7 +3,7 @@
 # variables
 filename = 'ExerciseB-OutputB.txt'
 term1 = ' open('
-term2 = 'fchmodat'
+term2 = 'fchmodat('
 
 # pid function
 def pid_from_line(line):
@@ -11,7 +11,7 @@ def pid_from_line(line):
     pid = line[0 : idx]
     return pid
 
-# # textfile header
+# textfile header
 with open(filename, 'a')  as f:
     f.write("\n******OutputB*****\n\n")
     f.write("'Modify Permission' Event Sequences:\n\n")
@@ -97,7 +97,7 @@ def logB(lines2):
         line_num += 1
 
 # find events in Log C
-def logC(lines3):
+def logC(lines):
     pids = [None, None]
     line_nums = [None, None]
     line_strs = [None, None]
@@ -107,7 +107,7 @@ def logC(lines3):
         f.write("\n******Log C******\n")
         f.write("{:<10} {:<10} \n".format("Timestamp", "Log Entry"))
         f.write("-" * 90  )
-    for line in lines3:
+    for line in lines:
         if term1 in line:
             kw_found[0] = True
             pids[0] = pid_from_line(line)
@@ -136,7 +136,7 @@ def logC(lines3):
                         kw_found = [False, False]        
         line_num += 1
         
-# establish log path
+## establish log path
 file_path1 = 'data/LogA.strace'
 file_path2 = 'data/LogB.strace'
 file_path3 = 'data/LogC.strace'
