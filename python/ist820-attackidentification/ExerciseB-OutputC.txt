@@ -1,0 +1,14 @@
+
+******OutputB*****
+
+'Modify Permission' Event Sequences:
+
+
+******Log A******
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+******Log B******
+Timestamp  Log Entry  
+------------------------------------------------------------------------------------------
+1322       2140  open("/dev/null", O_RDONLY)       = 0</dev/null>
+ 1323       2140  execve("./remote_shell.elf", ["./remote_shell.elf"], [/* 1 var */]) = 0

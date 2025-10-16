@@ -1,9 +1,9 @@
-### Exercise B Output B
+### Exercise B Output C
 
 # variables
-filename = 'ExerciseB-OutputB.txt'
+filename = 'ExerciseB-OutputC.txt'
 term1 = ' open('
-term2 = 'fchmodat('
+term2 = ' execve('
 
 # pid function
 def pid_from_line(line):
