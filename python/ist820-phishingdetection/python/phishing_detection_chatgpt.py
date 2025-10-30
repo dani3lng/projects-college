@@ -13,7 +13,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 ## load dataset
-data = pd.read_csv("data/Phishing_Legitimate_train.csv")
+data = pd.read_csv("data/Phishing_Legitimate_train.csv")    # edit file path for data source as needed
 print(data.head())
 print(data.shape)
 print(data.isnull().sum())
