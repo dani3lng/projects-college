@@ -5,9 +5,11 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn import tree
 
 #Load dataset
 train_df = pd.read_csv("data/Phishing_Legitimate_train.csv")
