@@ -47,14 +47,14 @@ print(classification_report(y_test, y_pred))
 
 
 #Visualize the decision tree
-plt.figure(figsize=(25, 8))
+plt.figure(figsize=(30, 8))
 tree.plot_tree(
     clf,
     filled=True,
     feature_names=features,
     class_names=["Legitimate", "Phishing"],
     rounded=True,
-    fontsize=8
+    fontsize=12
 )
 plt.title("Decision Tree for Phishing Detection")
 plt.show()
