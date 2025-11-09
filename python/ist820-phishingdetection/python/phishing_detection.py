@@ -47,7 +47,7 @@ print(classification_report(y_test, y_pred))
 
 
 #Visualize the decision tree
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(25, 8))
 tree.plot_tree(
     clf,
     filled=True,
