@@ -1,15 +1,12 @@
 ### Phishing detection with Machine-learning Algorithm
 
 import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report, confusion_matrix, precision_score, recall_score, f1_score, accuracy_score, ConfusionMatrixDisplay
-import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn import tree
 
@@ -44,7 +41,7 @@ X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
 #training models
-clf = DecisionTreeClassifier(max_depth=4, random_state=42)
+clf = DecisionTreeClassifier(max_depth=10, random_state=42)
 clf.fit(X_train, y_train)
 
 
@@ -55,7 +52,7 @@ print(classification_report(y_test, y_pred))
 
 
 #Visualize the decision tree
-plt.figure(figsize=(30, 8))
+plt.figure(figsize=(50, 8))
 tree.plot_tree(
     clf,
     filled=True,
@@ -92,6 +89,7 @@ print("Best tree depth (visually estimated): around 4-10 based on precision/reca
 print("Use this tuned model for your final test evaluation.")
 
 #try different models to compare
+print("\n--- Additional Models Comparison ---")
 models = {
     "Logistic Regression": LogisticRegression(max_iter=5000),
     "SVM": SVC(kernel='rbf'),
