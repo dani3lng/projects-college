@@ -1,4 +1,4 @@
-### Phishing detection with Machine-learning Algorithm
+### Phishing detection with Machine-learning Algorithm by ChatGPT
 
 ## feature imports
 import pandas as pd
@@ -51,7 +51,7 @@ y = y.replace(-1, 0)
 print(y.value_counts())
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42, stratify=y
+    X, y, test_size=0.5, random_state=42, stratify=y
 )
 
 ## feature scaling
@@ -81,11 +81,6 @@ importances = pd.Series(model.feature_importances_, index=X.columns)
 importances.nlargest(10).plot(kind='barh')
 plt.title("Top 10 Important Features")
 plt.show()
-
-## try other models
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-from sklearn.ensemble import GradientBoostingClassifier
 
 models = {
     "Random Forest": RandomForestClassifier(n_estimators=200),

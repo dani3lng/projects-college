@@ -4,16 +4,19 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report, confusion_matrix, precision_score, recall_score, f1_score, accuracy_score, ConfusionMatrixDisplay
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn import tree
 
+
 #Load dataset
 train_df = pd.read_csv("data/Phishing_Legitimate_train.csv")
-test_df = pd.read_csv("data/Phishing_Legitimate_train.csv")
+test_df = pd.read_csv("data/Phishing_Legitimate_test.csv")
 
 # Clean missing values from test set
 test_df = test_df.dropna(subset=["CLASS_LABEL"])
@@ -34,6 +37,11 @@ y_test = test_df["CLASS_LABEL"]
 #test data with matching features
 X_test = test_df[[col for col in features if col in test_df.columns]]
 y_test = test_df["CLASS_LABEL"]
+
+# feature scaling
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
 
 #training models
 clf = DecisionTreeClassifier(max_depth=4, random_state=42)
@@ -83,8 +91,13 @@ print("\n--- Model Summary ---")
 print("Best tree depth (visually estimated): around 4-10 based on precision/recall trends.")
 print("Use this tuned model for your final test evaluation.")
 
-
-
-
-
-
+#try different models to compare
+models = {
+    "Logistic Regression": LogisticRegression(max_iter=5000),
+    "SVM": SVC(kernel='rbf'),
+    "Gradient Boosting": GradientBoostingClassifier()
+}
+for name, clf in models.items():
+    clf.fit(X_train_scaled, y_train)
+    preds = clf.predict(X_test_scaled)
+    print(f"{name} Accuracy: {accuracy_score(y_test, preds):.4f}")
