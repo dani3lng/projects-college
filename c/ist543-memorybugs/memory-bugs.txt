@@ -1,0 +1,289 @@
+MEMORY BUG ANALYSIS - ORGANIZED BY BUG TYPE
+
+================================================================================
+1. HEAP BUFFER OVERFLOW BUGS
+================================================================================
+
+BUG 1.1: checkerboard.c - Unchecked Array Bounds in Checkerboard Pattern
+
+   File: checkerboard.c
+   Function: main()
+   
+   Description:
+   In the nested loops that fill the checkerboard pattern, the code accesses 
+   image_data[square_top_left_y + y][square_top_left_x + x] without checking 
+   if the indices exceed the image dimensions. When the image height or width 
+   is not evenly divisible by square_width, the last squares in each row and 
+   column will attempt to write beyond the allocated memory buffer for img->px.
+   
+   Specifically:
+   - square_top_left_y + y can reach values >= height when processing the last 
+     partial square
+   - square_top_left_x + x can reach values >= width for the last partial square
+
+   Recommended Fix:
+   Modify the inner loops to respect the image boundaries. Calculate the actual 
+   bounds for each square:
+   
+   int y_max = (square_top_left_y + square_width > height) ? 
+               height - square_top_left_y : square_width;
+   for (int y = 0; y < y_max; y++)
+   
+   int x_max = (square_top_left_x + square_width > width) ? 
+               width - square_top_left_x : square_width;
+   for (int x = 0; x < x_max; x++)
+
+---
+
+BUG 1.2: circle.c - Unchecked Circle Coordinate Calculations
+
+   File: circle.c
+   Function: main()
+   
+   Description:
+   The code iterates through pixel coordinates using the circle equation 
+   (x - center_x)^2 + (y - center_y)^2 = radius^2. However, there are NO 
+   boundary checks to ensure calculated x and y coordinates remain within 
+   the image dimensions.
+   
+   The loops access:
+   - image_data[y][x] where y = round(center_y ± sqrt(...)) and 
+     x can be center_x ± radius
+   - image_data[y][x] where x = round(center_x ± sqrt(...)) and 
+     y can be center_y ± radius
+   
+   If center_x, center_y, or radius are large/negative values (from atoi), 
+   array indices easily exceed allocated buffer bounds.
+
+   Recommended Fix:
+   Add boundary checking before every write to image_data:
+   
+   if (x >= 0 && x < width && y >= 0 && y < height) {
+       image_data[y][x].red = (hex_color & 0xff0000) >> 16;
+       image_data[y][x].green = (hex_color & 0x00ff00) >> 8;
+       image_data[y][x].blue = (hex_color & 0x0000ff);
+       image_data[y][x].alpha = 0xff;
+   }
+   
+   Add input validation for center_x, center_y, and radius to ensure they 
+   are within reasonable bounds before calculations.
+
+---
+
+BUG 1.3: filter.c (filter_blur) - Off-by-One Error in Loop Conditions
+
+   File: filter.c
+   Function: filter_blur()
+   
+   Description:
+   The filter_blur function has critical off-by-one errors in loop conditions:
+   
+   a) "for (long i = 0; i <= img->size_y; i++)" should use < not <=
+      "for (long j = 0; j <= img->size_x; j++)" should use < not <=
+      This causes reads/writes to image_data[size_y] and image_data[size_x], 
+      which are out of bounds.
+   
+   b) When reading with offsets, no bounds checking:
+      "struct pixel current = image_data[i + y_offset][j + x_offset];"
+      Can read far beyond the allocated buffer if offsets push indices out 
+      of bounds.
+
+   Recommended Fix:
+   Change loop conditions to use < instead of <=:
+   for (long i = 0; i < img->size_y; i++)
+   for (long j = 0; j < img->size_x; j++)
+   
+   Add boundary checking for offset reads:
+   if (i + y_offset >= 0 && i + y_offset < img->size_y && 
+       j + x_offset >= 0 && j + x_offset < img->size_x) {
+       struct pixel current = image_data[i + y_offset][j + x_offset];
+       // accumulate values
+   }
+
+---
+
+BUG 1.4: filter.c (filter_negative) - Off-by-One Error in Loop Conditions
+
+   File: filter.c
+   Function: filter_negative()
+   
+   Description:
+   Same off-by-one error as filter_blur:
+   "for (long i = 0; i <= img->size_y; i++)"
+   "for (long j = 0; j <= img->size_x; j++)"
+   
+   Accesses image_data[size_y] and image_data[size_x], which are out of bounds.
+
+   Recommended Fix:
+   Change <= to <:
+   for (long i = 0; i < img->size_y; i++)
+   for (long j = 0; j < img->size_x; j++)
+
+================================================================================
+2. USE OF UNINITIALIZED VARIABLES
+================================================================================
+
+BUG 2.1: filter.c (filter_grayscale) - Uninitialized Loop Variables
+
+   File: filter.c
+   Function: filter_grayscale()
+   
+   Description:
+   The variables i and j are declared but NOT initialized:
+   "for (unsigned short i; i < img->size_y; i++)"
+   "for (unsigned short j; j < img->size_x; j++)"
+   
+   The loop will use uninitialized stack values, causing undefined behavior 
+   and incorrect loop iteration. The loop start point is unpredictable.
+
+   Recommended Fix:
+   Initialize both variables to 0:
+   for (unsigned short i = 0; i < img->size_y; i++)
+   for (unsigned short j = 0; j < img->size_x; j++)
+
+================================================================================
+3. USE-AFTER-FREE / DANGLING POINTER
+================================================================================
+
+BUG 3.1: filter.c (get_pixel) - Returning Pointer to Stack Memory
+
+   File: filter.c
+   Function: get_pixel() [called by filter_negative()]
+   
+   Description:
+   The get_pixel() function returns a pointer to a local stack variable:
+   "struct pixel px; return &px;"
+   
+   The returned pointer becomes invalid after the function returns because 
+   the stack frame is destroyed. When this pointer is dereferenced in 
+   filter_negative(), it accesses invalid memory (use-after-free with 
+   dangling pointer).
+
+   Recommended Fix:
+   Option 1 - Use dynamic allocation:
+   malloc() the pixel, return the pointer, and ensure it's freed in the 
+   caller after use.
+   
+   Option 2 - Redesign the function:
+   Don't return a pointer to stack memory. Instead, pass the pixel by 
+   reference or return by value (non-pointer struct).
+
+================================================================================
+4. STACK BUFFER OVERFLOW
+================================================================================
+
+BUG 4.1: solid.c - Unbounded strcpy into Fixed-Size Buffer
+
+   File: solid.c
+   Function: main()
+   
+   Description:
+   The code uses strcpy without bounds checking:
+   "strcpy(output_name, argv[1]);"
+   
+   If argv[1] contains a string longer than OUTPUT_NAME_SIZE (500 bytes), 
+   this will write beyond the bounds of the output_name buffer on the stack, 
+   causing a stack buffer overflow and corrupting the stack.
+
+   Recommended Fix:
+   Use strncpy with explicit size limits:
+   strncpy(output_name, argv[1], OUTPUT_NAME_SIZE - 1);
+   output_name[OUTPUT_NAME_SIZE - 1] = '\0';
+   
+   This ensures the buffer never exceeds its limit and is always null-terminated.
+
+================================================================================
+5. INCORRECT HEAP ALLOCATION / OFF-BY-ONE ERRORS
+================================================================================
+
+BUG 5.1: resize.c - Off-by-One Heap Allocation
+
+   File: resize.c
+   Function: main()
+   
+   Description:
+   The code allocates:
+   "new_img->px = malloc(n_pixels + sizeof(struct pixel));"
+   
+   This allocates n_pixels pixels PLUS one extra pixel. While this might not 
+   cause immediate access violations (extra memory acts as a guard), it's 
+   incorrect and wastes memory. More importantly, it indicates a 
+   misunderstanding of the allocation size needed.
+   
+   Additionally, no validation prevents new_height and new_width from 
+   overflowing or becoming negative after casting from float to unsigned.
+
+   Recommended Fix:
+   Allocate exactly the right amount of memory:
+   new_img->px = malloc(n_pixels * sizeof(struct pixel));
+   
+   Add overflow checking:
+   if (new_height > UINT_MAX / new_width) {
+       goto error;  // overflow detected
+   }
+
+---
+
+BUG 5.2: solid.c - Undersized Palette Allocation (Design Flaw)
+
+   File: solid.c
+   Function: allocate_palette()
+   
+   Description:
+   The allocate_palette() function allocates memory for only one struct pixel:
+   "struct pixel *ptr = malloc(sizeof(struct pixel));"
+   
+   While the code works (store_png is called with palette_length = 1), the 
+   design is confusing. A palette should ideally be an array, not a single pixel.
+
+   Recommended Fix:
+   Either:
+   a) Allocate based on the actual palette size needed:
+      malloc(palette_size * sizeof(struct pixel))
+   
+   b) Or if a single pixel is the intent, use a simpler design that doesn't 
+      use dynamic allocation or a misleading function name.
+
+================================================================================
+6. LOGIC ERROR / INCORRECT LOOP STRUCTURE
+================================================================================
+
+BUG 6.1: rect.c - Broken Nested Loop Structure
+
+   File: rect.c
+   Function: main()
+   
+   Description:
+   The rect.c file uses nested while loops with improper loop variable management:
+   
+   unsigned i = 0, j = 0;
+   while (i < height) {
+       while (j < width) {
+           // process pixel [i][j]
+           i++;    // <-- BUG: i is incremented in inner loop!
+           j++;
+       }
+       // j is never reset to 0
+   }
+   
+   This causes:
+   a) The inner loop only executes meaningful iterations for i=0
+   b) Loop counter i is incremented in the inner loop, skipping outer iterations
+   c) Only a diagonal stripe of pixels (where i==j) is processed, not the 
+      entire image
+   d) Additional issue: Line 35 passes "end_ptr" to strtol instead of "&end_ptr"
+
+   Recommended Fix:
+   Use proper for-loops with correct nesting:
+   for (unsigned i = 0; i < height; i++) {
+       for (unsigned j = 0; j < width; j++) {
+           if (i >= top_left_y && i <= bottom_right_y && 
+               j >= top_left_x && j <= bottom_right_x) {
+               // write to image_data[i][j]
+           }
+       }
+   }
+   
+   Also fix the strtol call on line 35:
+   Change: long hex_color = strtol(argv[7], end_ptr, 16);
+   To:     long hex_color = strtol(argv[7], &end_ptr, 16);
